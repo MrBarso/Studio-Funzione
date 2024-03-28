@@ -19,7 +19,6 @@ root.grid_rowconfigure((0, 1, 2), weight=1)
 
 
 
-
 #input of the function
 
 #actual input method
@@ -28,13 +27,13 @@ def input():
     frame_input.destroy()
 
     # create sidebar frame with widgets
-    root.sidebar_frame = customtkinter.CTkFrame(self, width=140, corner_radius=0)
-    root.sidebar_frame.grid(row=0, column=0, rowspan=4, sticky="nsew")
+    root.sidebar_frame = customtkinter.CTkFrame(root, width=170, corner_radius=0)
+    root.sidebar_frame.grid(row=0, column=0, rowspan=10, sticky="nsew")
     root.sidebar_frame.grid_rowconfigure(4, weight=1)
 
 #graphic elements
 frame_input = customtkinter.CTkFrame(master=root)
-frame_input.grid(pady = 15, padx = 24)
+frame_input.grid(pady = 15, padx = 24, row=0, column=1)
 
 instruction = customtkinter.CTkLabel(master=frame_input, text="Enter your function!")
 instruction.grid(pady = 8, padx = 5, row = 0, column = 1)
